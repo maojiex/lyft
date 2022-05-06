@@ -9,6 +9,7 @@ def index():
 
 @app.route("/lyftTest/<input>", methods = ['GET', 'POST'])
 def lyft(input):
+    # type your input after ../lyftTest/
     res = requests.post('https://lyft-interview-test.glitch.me/test', json={"string_to_cut": input})
     if res.ok:
         return res.json()
@@ -16,5 +17,4 @@ def lyft(input):
         return "fail"
 
 
-# https://lyft-interview-test.glitch.me/test
 
